@@ -1,7 +1,31 @@
 function update() {
-  activityTime[activities.indexOf(lastPicClicked)] += 1;
+  activityTime[activities.indexOf(lastPicClicked)] += 10;
   localStorage.setItem(lastPicClicked, activityTime[activities.indexOf(lastPicClicked)])
   console.log(activityTime)
+}
+
+function chartUpdate() {
+  new Chart($('myChart').getContext('2d'), {
+    type: "pie",
+    data: {
+      labels: activities,
+      datasets: [{
+        backgroundColor: barColors,
+        data: activityTime
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          labelFormat: '{name}:{percentage:.1f}%',
+          itemStyle: {
+            color: 'red',
+            fontSize: '16px'
+          }
+        }
+      }
+    }
+  });
 }
 
 function pageToggle() {

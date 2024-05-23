@@ -16,15 +16,8 @@ for (var i = 0; i < activities.length; i++) {
   if ((i+1)%4 == 0) {$('activityPicDiv').innerHTML += '<br>'}
 }
 
-new Chart($('myChart').getContext('2d'), {
-    type: "pie",
-    data: {
-      labels: activities,
-      datasets: [{
-        backgroundColor: barColors,
-        data: activityTime
-      }]
-    }
-  });
+  
+setInterval(update,1000);
+setInterval(chartUpdate,60000);
 
-setInterval(update,10000);
+chartUpdate();
