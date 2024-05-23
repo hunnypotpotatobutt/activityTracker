@@ -1,8 +1,6 @@
 function update() {
   activityTime[activities.indexOf(lastPicClicked)] += 1;
   localStorage.setItem(lastPicClicked, activityTime[activities.indexOf(lastPicClicked)]);
-  console.log(activityTime);
-  
 }
 
 function pageToggle() {
