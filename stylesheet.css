@@ -28,16 +28,13 @@ background-size:cover;
 margin: 0;
 overflow: hidden;
 }
-#statDiv {
-    display: none;
-}
 #pageToggle {
     height:100px;
     background-color: yellow;
 }
 .activityPics {
-  height: 248;
-  width: 248;
+  height: 246;
+  width: 246;
   border: 3px solid gray;
     
 }

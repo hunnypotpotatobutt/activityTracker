@@ -5,7 +5,8 @@ function update() {
 }
 
 function pageToggle() {
-    
+    if ($('activityPicDiv').style.display == "none") $('activityPicDiv').style.display = "inline"
+    else $('activityPicDiv').style.display = "none"
 }
     
 function highlight() {
