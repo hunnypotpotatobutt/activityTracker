@@ -1,4 +1,6 @@
 function Update() {
+    activityTime[activities.indexOf(lastPicClicked)] += 1;
+    console.log(activityTime);
 }
 
 function Highlight() {

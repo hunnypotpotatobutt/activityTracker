@@ -1,9 +1,12 @@
 activities = ["masturbate", "gamesWithBro", "rest", "league", "momma", "parasocial", "sleep", "stats", "webBrowsing"];
-lastPicClicked = "none"
+activityTime = new Array(activities.length);
+lastPicClicked = "none";
+
 
 for (var i = 0; i < activities.length; i++) {
-$('div1').innerHTML += '<img id="'+activities[i]+'" src="pics/'+activities[i]+'.png" class = "activityPics" onclick="Highlight()">'
-if ((i+1)%4 == 0) {$('div1').innerHTML += '<br>'}
+    activityTime[i] = 0;
+    $('div1').innerHTML += '<img id="'+activities[i]+'" src="pics/'+activities[i]+'.png" class = "activityPics" onclick="Highlight()">'
+    if ((i+1)%4 == 0) {$('div1').innerHTML += '<br>'}
 }
 
-Update();
+setInterval(Update,1000);
