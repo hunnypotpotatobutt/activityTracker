@@ -23,9 +23,11 @@ function updateTime() {
     
 function highlight() {
   if (lastPicClicked != event.target.id) {
+    updateTime();
+    
     event.target.style.border = '3px solid yellow';
     if (lastPicClicked != "none") {$(lastPicClicked).style.border = '3px solid gray'}
     lastPicClicked = event.target.id;
-    updateTime();
+    
   }
 }
