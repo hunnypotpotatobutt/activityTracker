@@ -1,5 +1,5 @@
 
-activities = ["masturbate", "gamesWithBro", "rest", "league", "momma", "parasocial", "sleep", "stats", "webBrowsing", "huny", "prepareFoodDrink","shower","bike","lift","muny","casualGaming"];
+activities = ["masturbate", "gamesWithBro", "rest", "league", "momma", "parasocial", "sleep", "stats", "webBrowsing", "huny", "prepareFoodDrink","shower","bike","lift","muny","casualGaming", "gameDev"];
 activityTime = new Array(activities.length);
 lastPicClicked = "none";
 
