@@ -13,14 +13,14 @@ height: 3000px;
 background-size:cover;
 }
 button {
-    background:#696969;
-    color: white;
-    border-radius: 5px;
-    height:25px;
+  background:#696969;
+  color: white;
+  border-radius: 5px;
+  height:25px;
 }
 ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
+  width: 0px;
+  background: transparent;
 }
 body {
 background-color: grey;
@@ -28,12 +28,16 @@ background-size:cover;
 margin: 0;
 overflow: hidden;
 }
-#statText {
-    color:white
+#statDiv {
+    display: none;
+}
+#pageToggle {
+    height:100px;
+    background-color: yellow;
 }
 .activityPics {
-    height: 240;
-    width: 240;
-    border: 3px solid cyan;
+  height: 234;
+  width: 234;
+  border: 3px solid cyan;
     
 }

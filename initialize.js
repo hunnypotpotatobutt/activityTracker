@@ -3,10 +3,11 @@ activityTime = new Array(activities.length);
 lastPicClicked = "none";
 
 
+
 for (var i = 0; i < activities.length; i++) {
-    activityTime[i] = 0;
-    $('div1').innerHTML += '<img id="'+activities[i]+'" src="pics/'+activities[i]+'.png" class = "activityPics" onclick="Highlight()">'
-    if ((i+1)%4 == 0) {$('div1').innerHTML += '<br>'}
+  activityTime[i] = 0;
+  $('activityPicDiv').innerHTML += '<img id="'+activities[i]+'" src="pics/'+activities[i]+'.png" class = "activityPics" onclick="highlight()">'
+  if ((i+1)%4 == 0) {$('activityPicDiv').innerHTML += '<br>'}
 }
 
-setInterval(Update,1000);
+setInterval(update,1000);
