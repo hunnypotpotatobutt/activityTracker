@@ -1,4 +1,5 @@
 function pageToggle() {
+  updateTime();
     if ($('activityPicDiv').style.display == "none") $('activityPicDiv').style.display = "inline"
     else {
       $('activityPicDiv').style.display = "none";
@@ -8,7 +9,6 @@ function pageToggle() {
         $('statDiv').innerHTML += activities[i] + ' ' + (activityTime[i]/3600000).toFixed(2) + '<br>';
       }
     }
-    updateTime();
 }
 
 function updateTime() {
@@ -16,6 +16,7 @@ function updateTime() {
   
   const d = new Date();
   time = d.getTime();
+  localStorage.setItem("time", time);
     
   activityTime[activities.indexOf(lastPicClicked)] += time-oldTime;
   localStorage.setItem(lastPicClicked, activityTime[activities.indexOf(lastPicClicked)]);
@@ -28,6 +29,7 @@ function highlight() {
     event.target.style.border = '3px solid yellow';
     if (lastPicClicked != "none") {$(lastPicClicked).style.border = '3px solid gray'}
     lastPicClicked = event.target.id;
+    localStorage.setItem("lastPicClicked", lastPicClicked);
     
   }
 }
