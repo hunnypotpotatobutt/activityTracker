@@ -15,11 +15,10 @@ for (var i = 0; i < activities.length; i++) {
   $('activityPicDiv').innerHTML += '<img id="'+activities[i]+'" src="pics/'+activities[i]+'.png" class = "activityPics" onclick="highlight()">'
   if ((i+1)%4 == 0) {$('activityPicDiv').innerHTML += '<br>'}
 }
-
+var lastPicClicked = "none";
 if (localStorage.getItem("lastPicClicked")) {
   if (localStorage.getItem("lastPicClicked") != "traveling") {
     var lastPicClicked = localStorage.getItem("lastPicClicked"); 
     $(lastPicClicked).style.border = '3px solid yellow';
   }
 }
-else var lastPicClicked = "none";
