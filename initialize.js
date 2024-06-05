@@ -16,8 +16,10 @@ for (var i = 0; i < activities.length; i++) {
   if ((i+1)%4 == 0) {$('activityPicDiv').innerHTML += '<br>'}
 }
 
-if (localStorage.getItem("lastPicClicked") && lastPicClicked != "traveling") {
-  var lastPicClicked = localStorage.getItem("lastPicClicked"); 
-  $(lastPicClicked).style.border = '3px solid yellow';
+if (localStorage.getItem("lastPicClicked")) {
+  if (localStorage.getItem("lastPicClicked") != "traveling") {
+    var lastPicClicked = localStorage.getItem("lastPicClicked"); 
+    $(lastPicClicked).style.border = '3px solid yellow';
+  }
 }
 else var lastPicClicked = "none";
