@@ -3,7 +3,7 @@ const d = new Date();
 if (localStorage.getItem("time")) var time = localStorage.getItem("time")
 else var time = d.getTime();
 
-activities = ["masturbate", "gamesWithBro", "rest", "league", "momma", "parasocial", "sleep", "stats", "webBrowsing", "huny", "prepareFoodDrink","shower","bike","lift","muny","casualGaming", "gameDev", "cleaning", "thinking","japanese","traveling"];
+activities = ["masturbate", "gamesWithBro", "rest", "league", "momma", "parasocial", "sleep", "stats", "webBrowsing", "huny", "prepareFoodDrink","shower","bike","lift","muny","casualGaming", "gameDev", "cleaning", "thinking","japanese","travel"];
 activityTime = new Array(activities.length);
 
 
