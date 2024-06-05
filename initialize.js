@@ -18,6 +18,9 @@ for (var i = 0; i < activities.length; i++) {
 
 if (localStorage.getItem("lastPicClicked")) {
   var lastPicClicked = localStorage.getItem("lastPicClicked"); 
+  
+  if (lastPicClicked == "traveling") break;
+  
   $(lastPicClicked).style.border = '3px solid yellow';
 }
 else var lastPicClicked = "none";
