@@ -20,8 +20,7 @@ if (localStorage.getItem("lastPicClicked")) {
   var lastPicClicked = localStorage.getItem("lastPicClicked"); 
   
   //account for people who's last pic clicked is from an old version
-  if (lastPicClicked == "traveling") 
-
-  else $(lastPicClicked).style.border = '3px solid yellow';
+  if (lastPicClicked != "traveling") 
+    $(lastPicClicked).style.border = '3px solid yellow';
 }
 else var lastPicClicked = "none";
