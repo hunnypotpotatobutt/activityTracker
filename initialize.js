@@ -16,11 +16,8 @@ for (var i = 0; i < activities.length; i++) {
   if ((i+1)%4 == 0) {$('activityPicDiv').innerHTML += '<br>'}
 }
 
-if (localStorage.getItem("lastPicClicked")) {
+if (localStorage.getItem("lastPicClicked") && lastPicClicked != "traveling") {
   var lastPicClicked = localStorage.getItem("lastPicClicked"); 
-  
-  //account for people who's last pic clicked is from an old version
-  if (lastPicClicked != "traveling") 
-    $(lastPicClicked).style.border = '3px solid yellow';
+  $(lastPicClicked).style.border = '3px solid yellow';
 }
 else var lastPicClicked = "none";
