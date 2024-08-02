@@ -1,14 +1,26 @@
 function pageToggle() {
   updateTime();
-    if ($('activityPicDiv').style.display == "none") $('activityPicDiv').style.display = "inline"
+    if ($('activityPicDiv').style.display == "none"){
+    $('activityPicDiv').style.display = "inline";
+    $('activityLogReset').style.display = "none";    
+    $('statDiv').innerHTML = '';
+    } 
     else {
       $('activityPicDiv').style.display = "none";
+       $('activityLogReset').style.display = "inline";   
       
       $('statDiv').innerHTML = '';
       for (var i = 0; i < activities.length; i++) {
         $('statDiv').innerHTML += activities[i] + ' ' + (activityTime[i]/3600000).toFixed(2) + '<br>';
       }
     }
+}
+
+function activityLogReset() {
+  for (var i = 0; i < activities.length; i++) {  
+  activityTime[i] = 0;
+  localStorage.setItem(activities[i], 0);
+  }
 }
 
 function updateTime() {
